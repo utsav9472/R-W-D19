@@ -1,0 +1,775 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#header {
+    height: 100vh;
+    width: 100%;
+    background-image: url('bg.png');
+    background-size: cover;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-right: 10px;
+    gap: 100px;
+    font-size: 20px;
+
+}
+
+
+#menu a {
+    text-decoration: none;
+    color: rgb(128, 91, 72);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+
+}
+
+#menu a:hover {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    color: rgb(60, 24, 10);
+}
+
+#serchicn {
+    color: rgb(128, 91, 72);
+}
+
+#logo {
+    height: 50px;
+    width: 50px;
+}
+
+#logoimg {
+    height: 100px;
+}
+
+#menubar {
+    height: 50px;
+    width: 50px;
+    margin-top: -25px;
+    margin-left: 70px;
+    position: absolute;
+    display: none;
+}
+
+#hamburger {
+    height: 50px;
+    width: 50px;
+    margin-top: -25px;
+    margin-left: 70px;
+    position: absolute;
+    color: rgb(128, 91, 72);
+    display: none;
+
+}
+
+#bars {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+/* =============================================navbar responsive================================================ */
+
+@media (max-width:768px) {
+    #header {
+        width: 100%;
+        background-color: rgb(234, 205, 189);
+        justify-content: space-between;
+
+    }
+
+    #hamburger {
+        display: block;
+    }
+
+    #logoimg {
+        position: absolute;
+        left: 61%;
+
+    }
+
+    #menu {
+
+        margin-top: 0px;
+        margin-right: 40%;
+        gap: 30px;
+        display: none;
+
+    }
+
+    .menuitem {
+        position: relative;
+        top: 75px;
+        left: 12%;
+    }
+
+    #serchicn {
+        display: none;
+    }
+
+    #menubar:checked~#menu {
+        display: flex;
+
+    }
+
+}
+
+/* ====================================hero_section============================================================ */
+#hero {
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+
+}
+
+#tag1 {
+    font-size: 80px;
+    color: #fff;
+    margin-top: 200px;
+    margin-left: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+}
+
+#tag2 {
+    font-size: 152px;
+    color: rgb(234, 205, 189);
+    margin-left: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+}
+
+#shopbtn {
+    font-size: 20px;
+    color: black;
+    margin-left: 80px;
+    font-family: sans-serif;
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+#shopbtn:hover {
+    background-color: rgb(128, 91, 72);
+    color: #fff;
+    scale: 1.2;
+    text-shadow: 0 0 10px #fff;
+}
+
+
+/* ==========================================hero responsive=========================================================== */
+
+@media (max-width:768px) {
+    #tag1 {
+        font-size: 60px;
+    }
+
+    #tag2 {
+        font-size: 102px;
+    }
+
+    #shopbtn {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:680px) {
+    #tag1 {
+        font-size: 60px;
+    }
+
+    #tag2 {
+        font-size: 102px;
+    }
+
+    #shopbtn {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:580px) {
+    #tag1 {
+        font-size: 50px;
+    }
+
+    #tag2 {
+        font-size: 82px;
+    }
+
+    #shopbtn {
+        font-size: 16px;
+    }
+}
+
+#category {
+    background-color: rgb(234, 205, 189);
+    height: 100%;
+    width: 100%;
+    padding: 50px;
+
+}
+
+#catheding {
+    font-size: 80px;
+    color: black;
+    margin-top: 20px;
+    margin-left: 28%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+}
+
+#catheding2 {
+    font-size: 30px;
+    color: rgb(60, 24, 10);
+    margin-top: 10px;
+    margin-left: 26%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+}
+
+.cat {
+    height: 300px;
+    width: 600px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50px;
+    opacity: 0.8;
+}
+
+.cat img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+}
+
+.cat img:hover {
+    scale: 1.1;
+}
+
+#catcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.catname {
+    position: absolute;
+    top: 20px;
+    left: 10%;
+    font-size: 35px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+
+}
+
+.catname3 {
+    position: absolute;
+    top: 20px;
+    left: 25%;
+    font-size: 40px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.catname1 {
+    position: absolute;
+    top: 20px;
+    left: 20%;
+    font-size: 40px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.catview {
+    position: absolute;
+    bottom: 20px;
+    left: 150px;
+    font-size: 30px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.catview3 {
+    position: absolute;
+    bottom: 20px;
+    left: 150px;
+    font-size: 30px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.catview1 {
+    position: absolute;
+    bottom: 20px;
+    left: 140px;
+    font-size: 30px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* =======================================catoegory responsive========================================== */
+
+
+@media(max-width:768px) {
+
+    #catheding {
+        font-size: 50px;
+        margin-left: 24%;
+    }
+
+    #catheding2 {
+        font-size: 20px;
+        margin-left: 20%;
+    }
+
+    #catcontainer {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .catname {
+        left: 20%;
+    }
+
+    .catname3 {
+        left: 35%;
+    }
+
+    .catname1 {
+        left: 28%;
+    }
+
+    .catview {
+        left: 40%;
+    }
+
+    .catview3 {
+        left: 40%;
+    }
+
+    .catview1 {
+        left: 40%;
+    }
+
+}
+
+/* =============================================milkshake======================================================== */
+
+#milkshake {
+    background-color: rgb(234, 205, 189);
+    height: 100%;
+    width: 100%;
+    padding: 50px;
+}
+
+#milkheding {
+    font-size: 80px;
+    color: black;
+    margin-top: 20px;
+    margin-left: 28%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+}
+
+#milkheding2 {
+    font-size: 30px;
+    color: rgb(60, 24, 10);
+    margin-top: 10px;
+    margin-left: 28.5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+}
+
+#milkcontainer {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    gap: 50px;
+    margin-top: 50px;
+    height: 100%;
+    width: 1200px;
+}
+
+.shakes {
+    height: 450px;
+    width: 350px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50px;
+    opacity: 0.8;
+    background-color: rgb(210, 181, 165);
+
+}
+
+.shakes img {
+    height: 60%;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+    margin-top: 45px;
+    margin-left: 25%;
+}
+
+.shakes img:hover {
+    scale: 1.1;
+}
+
+.shakename {
+    font-size: 30px;
+    color: black;
+    margin-top: 20px;
+    margin-left: 25%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+}
+
+.shakesprice {
+    font-size: 30px;
+    color: black;
+    margin-top: 20px;
+    margin-left: 10%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    width: 100px;
+}
+
+.shakebtn {
+    width: 150px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(233, 181, 150);
+    top: 395px;
+    left: 170px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    position: absolute;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.shakebtn:hover {
+    background-color: rgb(128, 91, 72);
+    color: #fff;
+    scale: 1.1;
+    text-shadow: 0 0 10px #fff;
+}
+
+.likebtn {
+    height: 40px;
+    width: 150px;
+    background-color: rgb(233, 181, 150);
+    border-radius: 50px;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#likebtn i {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(233, 181, 150);
+    border-radius: 50px;
+    padding: 5px;
+}
+
+#liketext {
+    font-size: 20px;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+/* ==============================================milkshake responsive============================================================= */
+
+@media (max-width:768px) {
+    #milkheding {
+        font-size: 50px;
+        margin-left: 24%;
+    }
+
+    #milkheding2 {
+        font-size: 20px;
+        margin-left: 20%;
+    }
+
+    #milkcontainer {
+        width: 80%;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        margin-left: 25%;
+    }
+}
+
+
+/* =========================================blog=====================================================*/
+
+#blog {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(234, 205, 189);
+    padding: 50px;
+}
+
+#blogheding {
+    font-size: 80px;
+    color: black;
+    margin-top: 20px;
+    margin-left: 31.5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+}
+
+#blogcontainer {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+    gap: 50px;
+    margin-top: 50px;
+    height: 100%;
+
+}
+
+#blogcontainer img {
+
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+}
+
+#blogcontainer img:hover {
+    scale: 1.1;
+}
+
+#blogheding2 {
+    font-size: 30px;
+    color: rgb(60, 24, 10);
+    margin-top: 10px;
+    margin-left: 28.5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+}
+
+.blogcard {
+    height: 400px;
+    width: 400px;
+    background-color: rgb(210, 181, 165);
+    margin-top: 5%;
+    border-radius: 50px;
+
+}
+
+.imgconatiner {
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50px;
+
+
+}
+
+.blogtext {
+    color: rgb(41, 4, 22);
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-weight: lighter;
+}
+
+/* =========================================blog responsive=====================================================*/
+
+@media (max-width:768px) {
+    #blogheding {
+        font-size: 50px;
+        margin-left: 24%;
+    }
+
+    #blogheding2 {
+        font-size: 20px;
+        margin-left: 20%;
+    }
+
+    #blogcontainer {
+        width: 80%;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        margin-left: 25%;
+    }
+}
+
+/* ===========================================footer============================================================ */
+
+#footer {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(30, 30, 30);
+    padding: 50px;
+}
+
+#divcontainer {
+    display: flex;
+    flex-direction: row;
+}
+
+#middle {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+}
+
+#left a {
+    color: rgb(210, 181, 165);
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+#middle a {
+    color: rgb(210, 181, 165);
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+}
+
+#middle2 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+}
+
+#middle2 a {
+    color: rgb(210, 181, 165);
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+}
+
+#right {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+}
+
+.footertag {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+#insta {
+    font-size: 40px;
+    color: rgb(210, 181, 165);
+    margin-top: 10px;
+}
+
+#face {
+    font-size: 40px;
+    color: rgb(210, 181, 165);
+    margin-top: 10px;
+}
+
+#twi {
+    font-size: 40px;
+    color: rgb(210, 181, 165);
+    margin-top: 10px;
+}
+
+#lastdiv {
+    height: 60px;
+    width: 80%;
+    margin-top: 500px;
+    margin-left: -1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(210, 181, 165);
+    gap: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+#lastdiv a {
+    color: black;
+    font-size: 15px;
+    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    text-decoration: none;
+}
+
+/* =======================================footer responsive============================================== */
+
+@media (max-width:768px) {
+    #divcontainer {
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 10%;
+        gap: 20px;
+    }
+
+    #left {
+        margin-top: 5%;
+    }
+
+    #middle {
+        margin-left: 0%;
+        margin-top: 5%;
+    }
+
+    #middle2 {
+        margin-left: 0%;
+        margin-top: 5%;
+        ;
+    }
+
+    #right {
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+
+    #lastdiv {
+        height: 100%;
+        width: 500px;
+        margin-left: 2%;
+        gap: 10px;
+        margin-top: 10%;
+    }
+}
